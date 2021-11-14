@@ -1,0 +1,125 @@
+@import "variables";
+@import 'devextreme/dist/css/dx.light.css';
+
+$icon-default-color : #b2b2b2;
+//11.	Icon hover colors: edit (#3498db), delete (#c0392b), save (#8e44ad), cancel (#555555)
+$add-new-button-color : #2ecc71;
+$hover-color-edit : #3498db;
+$hover-color-remove : #c0392b;
+$hover-color-save : #8e44ad;
+$hover-color-cancel : #555555;
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ml4hes');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ml4hes#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?ml4hes') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?ml4hes') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?ml4hes##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.dx-icon {
+	@extend .dx-icon;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dx-icon-home {
+  &:before {
+    content: $dx-icon-home; 
+  }
+}
+
+.dx-icon-edit {
+  &:before {
+    content: $dx-icon-edit;
+	color : $icon-default-color	;
+  }
+}
+
+
+
+.dx-icon-save {
+  &:before {
+    content: $dx-icon-save; 
+	color : $icon-default-color	;
+  }
+}
+
+
+
+.dx-icon-revert {
+  &:before {
+    content: $dx-icon-cancel; 
+	color : $icon-default-color	;
+  }
+}
+
+
+.dx-icon-trash {
+  &:before {
+    content: $dx-icon-delete; 
+	color : $icon-default-color	;
+  }
+}
+
+
+.dx-icon-tree {
+  &:before {
+    content: $dx-icon-tree; 
+  }
+}
+.dx-icon-add {
+  &:before {
+    content: $dx-icon-add; 
+	color:$add-new-button-color;
+  }
+}
+
+
+
+.dx-icon-ok {
+  &:before {
+    content: $dx-icon-ok; 
+	color : $icon-default-color	;
+  }
+}
+.dx-icon-minus {
+  &:before {
+    content: $dx-icon-minus; 
+	color : $icon-default-color	;
+  }
+}
+
+.dx-icon-edit:hover {background-color:$hover-color-edit;}
+.dx-icon-revert:hover {background-color:$hover-color-cancel;}
+.dx-icon-save:hover {background-color:$hover-color-edit;}
+.dx-icon-trash:hover {background-color: $hover-color-remove}
+
+.dx-treelist-rowsview td {
+  vertical-align: middle;
+  height:24px
+}
